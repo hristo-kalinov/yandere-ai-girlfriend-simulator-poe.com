@@ -26,7 +26,7 @@ BOT = "chinchilla"
   "llama_2_70b_chat": "Llama-2-70b"
 '''
 poe.logger.setLevel(logging.INFO)
-client = poe.Client(token)
+client = poe.Client(TOKEN)
 client.send_chat_break(bot)
 @app.route('/v1/chat/completions', methods=['POST'])
 def index():
