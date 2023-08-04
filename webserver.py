@@ -26,20 +26,20 @@ BOT = "chinchilla"
   "llama_2_70b_chat": "Llama-2-70b"
 '''
 poe.logger.setLevel(logging.INFO)
-client = poe.Client(token)
-client.send_chat_break(bot)
+client = poe.Client(TOKEN)
+client.send_chat_break(BOT)
 @app.route('/v1/chat/completions', methods=['POST'])
 def index():
     content = request.get_data().decode('utf-8')
     data = json.loads(content)
     api_message_content = ""
     if len(data["messages"])==2:
-        client.send_chat_break(bot)
+        client.send_chat_break(BOT)
         api_message_content = data["messages"][-2]["content"] + "\n\n\nSenpai's first message: " + data["messages"][-1]["content"]
     else:
         api_message_content = data["messages"][-1]["content"]
     print(api_message_content)
-    for chunk in client.send_message(bot, api_message_content):
+    for chunk in client.send_message(BOT, api_message_content):
         pass
     response = enclose_in_braces(chunk["text"])
     print(response)
