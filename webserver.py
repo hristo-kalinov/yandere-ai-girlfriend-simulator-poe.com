@@ -41,7 +41,7 @@ def index():
     print(api_message_content)
     for chunk in client.send_message(bot, api_message_content):
         pass
-    response = chunk["text"]
+    response = enclose_in_braces(chunk["text"])
     print(response)
     data = {
             "choices": [
@@ -66,6 +66,12 @@ def index():
         }
     return data
 
+def enclose_in_braces(input_string):
+    if not input_string.startswith("{"):
+        input_string = "{" + input_string
+    if not input_string.endswith("}"):
+        input_string += "}"
+    return input_string
 if __name__ == '__main__':
     certfile = 'certificate.pem'  # Path to your self-signed certificate file
     keyfile = 'private_key.pem'   # Path to your private key file
