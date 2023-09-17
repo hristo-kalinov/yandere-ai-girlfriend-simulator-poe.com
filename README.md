@@ -28,7 +28,9 @@ Next, follow these steps to add the certificate to the **Trusted Root Certificat
 
 #### Step 3: Setting Up Local Hosts
 Execute the following command in the CMD window:
+
 ```python hosts.py```
+
 In the prompt, select option 1.
 #### Step 4: Configuring the Web Server
 Open the file webserver.py in your favorite text editor.
