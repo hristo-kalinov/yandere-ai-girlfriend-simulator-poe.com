@@ -49,7 +49,9 @@ Also, optionally, if you want to use a different bot, find the appropriate bot v
 
 #### Step 5: Starting the Web Server
 Execute the following command in the CMD window:
+
 ```python webserver.py```
+
 Launch the game and input a random value as the API key.
 
 Link to the game: https://helixngc7293.itch.io/yandere-ai-girlfriend-simulator
