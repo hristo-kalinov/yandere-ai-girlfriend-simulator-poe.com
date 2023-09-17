@@ -5,6 +5,7 @@ This repo will allow the game yandere ai girlfriend simulator to use any model o
 Before getting started, ensure you have the following requirements installed on your system:
 
 Python (compatible version, preferably the latest version)
+
 Administrative access to the command prompt (CMD)
 #### Step 1: Dependendcies
 Open a CMD window with administrative privileges.
